@@ -27,17 +27,20 @@ public class Main {
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                if (matrix[i][j] == search) {
-                    System.out.println("position " + i + "," + j);
 
-                    if (i > 0) {
+                if (matrix[i][j] == search) {
+                    System.out.println("Position " + i + "," + j + ":");
+                    System.out.println("\n adjacent numbers: ");
+
+                    if (j > 0) {
                         System.out.println("Left: " + matrix[i][j - 1]);
                     }
 
-                    if (j > 0) {
-                        System.out.println("Up: " + matrix[i][j]);
+                    if (i > 0) {
+                        System.out.println("Up: " + matrix[i - 1][j]);
                     }
-                    if (j < matrix.length - 1) {
+
+                    if (j < matrix[i].length - 1) {
                         System.out.println("Right: " + matrix[i][j + 1]);
                     }
 
